@@ -25,6 +25,7 @@
               <tr ng-repeat="listing in listings | filter:searchText">
                 <th>{{ listing.code }}</th>
                 <th>{{ listing.name }}</th>
+                <th><button ng-click="showDetails($index)">Details</button></th>
                 <th><button ng-click="deleteListing($index)">Delete</button></th>
               </tr>
             </table>
@@ -52,6 +53,11 @@
                    * consider how to use ng-click within the the table to implement this feature
 
              -->
+             <span>{{ detailedInfo.code }}</span><br>
+             <span>{{ detailedInfo.name }}</span><br>
+             <span>{{ detailedInfo.latitude }}</span><br>
+             <span>{{ detailedInfo.longitude }}</span><br>
+             <span>{{ detailedInfo.address }}</span><br>
           </div>
         </div>
       </div>

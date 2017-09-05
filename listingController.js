@@ -40,7 +40,8 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
       $scope.listings.splice(index, 1);
     };
     $scope.showDetails = function(index) {
-
+      $scope.detailedInfo = $scope.listings[index]
+      console.log($scope.detailedInfo)
     };
   }
 ]);
