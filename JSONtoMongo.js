@@ -10,7 +10,7 @@ var fs = require('fs'),
     config = require('./config');
 
 /* Connect to your database */
-mongoose.connect('mongodb://127.0.0.1:27017');
+mongoose.connect(config.db.uri);
 /*
   Instantiate a mongoose model for each listing object in the JSON file,
   and then save it to your Mongo database
