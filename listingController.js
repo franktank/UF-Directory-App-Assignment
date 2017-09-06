@@ -12,7 +12,6 @@ angular.module('listings').controller('ListingsController', ['$scope', 'Listings
       as described in the assignment spec.
      */
     $scope.addListing = function() {
-      console.log("FUCK UF");
       var newListing = {
         code: $scope.newCode,
         name: $scope.newName,
