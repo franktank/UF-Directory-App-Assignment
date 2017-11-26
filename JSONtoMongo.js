@@ -17,7 +17,7 @@ mongoose.connect(config.db.uri);
   and then save it to your Mongo database
  */
 fs.readFile('listings.json', 'utf8', function(err, data) {
-  listingData = data
+  var listingData = JSON.parse(data)
   listingData.entries.forEach(function(element) {
     var newListing = Listing({
       code: element.code,
